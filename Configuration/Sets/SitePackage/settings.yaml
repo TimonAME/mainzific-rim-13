@@ -1,0 +1,12 @@
+styles:
+    templates:
+        layoutRootPath: EXT:mainzific_rim13/Resources/Private/ContentElements/Layouts
+        partialRootPath: EXT:mainzific_rim13/Resources/Private/ContentElements/Partials
+        templateRootPath: EXT:mainzific_rim13/Resources/Private/ContentElements/Templates
+    content:
+        textmedia:
+            maxW: 1200
+            maxWInText: 600
+            linkWrap:
+                lightboxEnabled: true
+                lightboxCssClass: lightbox
