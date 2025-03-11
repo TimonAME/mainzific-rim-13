@@ -23,7 +23,7 @@ $EM_CONF[$_EXTKEY] = [
     'createDirs' => '',
     'clearCacheOnLoad' => 1,
     'author' => 'HTLW3R (Britta Reinwart, Felix Payer, Lorena Oroz, Jacob Schrott, Timon Amesmann)',
-    'author_email' => 'timon-a@outlook.at',
+    'author_email' => 'timonamesmann@gmail.com',
     'author_company' => 'HTL Rennweg',
     'version' => '1.0.0',
 ];
