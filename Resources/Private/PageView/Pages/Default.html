@@ -1,10 +1,19 @@
-<f:layout name="PageLayout"/>
+<f:layout name="Default" />
 <f:section name="Main">
 
-    <f:render partial="Stage" arguments="{_all}"/>
-
-    <div class="container">
-        <f:render partial="Content" arguments="{records: content.main.records}"/>
+    <div style="background-color: yellow; padding: 0.5em 1em;">
+        <dl>
+            <dt>Template file</dt>
+            <dd>
+                <code>packages/mainzific_rim13/Resources/Private/PageView/Pages/Default.html</code>
+            </dd>
+            <dt>Backend Configuration</dt>
+            <dd>
+                <code>packages/mainzific_rim13/Configuration/Sets/SitePackage/PageTsConfig/BackendLayouts/default.tsconfig</code>
+            </dd>
+        </dl>
     </div>
+
+    <f:render partial="Content" arguments="{records: content.main.records}"/>
 
 </f:section>

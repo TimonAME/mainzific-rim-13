@@ -1,7 +1,7 @@
 <?php
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'mainzific-rim-13',
+    'title' => 'Mainzific Rim 13',
     'description' => 'The package serves as a base for TYPO3 13.4 LTS sites used in the Mainzific Rim adventure. Young students solve missions in order to save Mainz from a Dino attack and become Certified TYPO3 editors doing so.',
     'category' => 'templates',
     'constraints' => [

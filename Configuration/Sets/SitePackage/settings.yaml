@@ -1,12 +1,28 @@
 styles:
-    templates:
-        layoutRootPath: EXT:mainzific_rim13/Resources/Private/ContentElements/Layouts
-        partialRootPath: EXT:mainzific_rim13/Resources/Private/ContentElements/Partials
-        templateRootPath: EXT:mainzific_rim13/Resources/Private/ContentElements/Templates
-    content:
-        textmedia:
-            maxW: 1200
-            maxWInText: 600
-            linkWrap:
-                lightboxEnabled: true
-                lightboxCssClass: lightbox
+  templates:
+    layoutRootPath: 'EXT:mainzific_rim13/Resources/Private/ContentElements/Layouts/'
+    partialRootPath: 'EXT:mainzific_rim13/Resources/Private/ContentElements/Partials/'
+    templateRootPath: 'EXT:mainzific_rim13/Resources/Private/ContentElements/Templates/'
+
+page:
+  pageview:
+    paths: 'EXT:mainzific_rim13/Resources/Private/PageView/'
+
+  meta:
+    viewport: 'width=device-width, initial-scale=1'
+    robots: 'index,follow'
+    apple-mobile-web-app-capable: 'no'
+    compatible: 'IE=edge'
+
+  tracking:
+    google:
+      trackingID: ''
+      anonymizeIp: '1'
+
+config:
+  no_cache: '0'
+  removeDefaultJS: '0'
+  admPanel: '1'
+  prefixLocalAnchors: 'all'
+  headerComment: 'build by get.typo3.org/sitepackage'
+  sendCacheHeaders: '1'

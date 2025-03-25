@@ -1,3 +1,21 @@
-@import './PageTsConfig/'
 @import './PageTsConfig/BackendLayouts/'
+
+RTE {
+    default {
+        preset = mainzific_rim13
+    }
+}
+
+TCEFORM {
+    pages {
+
+    }
+    tt_content {
+
+    }
+}
+
+TCEMAIN {
+
+}
 

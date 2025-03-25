@@ -10,9 +10,6 @@
         "typo3/cms-rte-ckeditor": "^13.4",
         "typo3/cms-fluid-styled-content": "^13.4"
     },
-    "suggest": {
-        "friendsoftypo3/content-blocks": "Allows to create custom content elements. "
-    },
     "autoload": {
         "psr-4": {
             "HtlRennweg\\MainzificRim13\\": "Classes/"

@@ -1,5 +1,5 @@
 name: htl-rennweg/mainzific-rim13
-label: 'mainzific-rim-13'
+label: 'Mainzific Rim 13'
 dependencies:
   - typo3/fluid-styled-content
   - typo3/fluid-styled-content-css
