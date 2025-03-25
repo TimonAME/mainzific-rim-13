@@ -1,20 +1,13 @@
 <f:layout name="Default" />
 <f:section name="Main">
-
-    <div style="background-color: yellow; padding: 0.5em 1em;">
-        <dl>
-            <dt>Template file</dt>
-            <dd>
-                <code>packages/mainzific_rim13/Resources/Private/PageView/Pages/Default.html</code>
-            </dd>
-            <dt>Backend Configuration</dt>
-            <dd>
-                <code>packages/mainzific_rim13/Configuration/Sets/SitePackage/PageTsConfig/BackendLayouts/default.tsconfig</code>
-            </dd>
-            <p>Sigmaboy</p>
-        </dl>
+    <div class="content-container">
+        <h1>Everything is well</h1>
+        <p>Nothing spectacular happened. Enjoy the day.</p>
     </div>
 
-    <f:render partial="Content" arguments="{records: content.main.records}"/>
+    <img src="{f:uri.resource(path: 'Images/Banners/csm_sunny_meadow.jpeg', extensionName: 'mainzific_rim13', absolute: 'true')}" alt="Sunny Meadow Banner" />
 
+    <div class="content-container">
+        <f:render partial="Content" arguments="{records: content.main.records}"/>
+    </div>
 </f:section>

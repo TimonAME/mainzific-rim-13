@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --typo3-orange: #FF8700;
+    --typo3-dark: #333333;
+    --white: #ffffff;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --footer-height: 80px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--white);
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.logo::after {
+    content: 'Mainzific Rim';
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--typo3-dark);
+}
+
+.main-nav {
+    margin-left: auto;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    color: var(--typo3-dark);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    display: block;
+    transition: color 0.2s ease;
+    position: relative;
+    font-weight: 500;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--typo3-orange);
+    transition: width 0.2s ease;
+}
+
+.nav-link:hover::after,
+.nav-item.active > .nav-link::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--typo3-orange);
+}
+
+.nav-item.active > .nav-link {
+    color: var(--typo3-orange);
+    font-weight: 700;
+}
+
+.nav-list > .nav-item:has(.subnav-list) > .nav-link {
+    padding-right: 1.2rem;
+}
+
+.nav-list > .nav-item:has(.subnav-list) > .nav-link::before {
+    content: '▾';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8em;
+}
+
+.subnav-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--white);
+    box-shadow: 0 4px 12px var(--shadow);
+    border-radius: 4px;
+    list-style: none;
+    padding: 0.5rem 0;
+    min-width: 220px;
+    margin-top: 0;
+}
+
+.nav-item:has(.subnav-list)::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    top: 100%;
+    left: 0;
+}
+
+.nav-item:hover .subnav-list {
+    display: block;
+    animation: fadeIn 0.2s ease;
+}
+
+.subnav-list .nav-item {
+    margin: 0;
+}
+
+.subnav-list .nav-link {
+    padding: 0.5rem 1rem;
+}
+
+.subnav-list .nav-link::after {
+    display: none;
+}
+
+.subnav-list .nav-link:hover {
+    background-color: var(--gray-100);
+}
+
+/* Content styling */
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+main img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin: 2rem 0;
+}
+
+h1 {
+    color: var(--typo3-dark);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 2rem 0 1rem;
+}
+
+p {
+    color: var(--typo3-dark);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+main > div:first-child {
+    margin-top: 3rem;
+}
+
+footer {
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: var(--typo3-dark);
+    color: var(--white);
+    text-align: center;
+    border-top: 4px solid var(--typo3-orange);
+    flex-shrink: 0;
+    height: var(--footer-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    font-weight: 400;
+    color: var(--white);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
