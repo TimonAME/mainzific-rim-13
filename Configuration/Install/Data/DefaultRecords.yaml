@@ -1,0 +1,27 @@
+records:
+  # Frontend-Benutzergruppe: TrustedNewsReporters
+  fe_groups:
+    1:
+      pid: 1
+      title: "TrustedNewsReporters"
+      hidden: 0
+
+  # Frontend-Benutzer: Bob Bernsteiner
+  fe_users:
+    1:
+      pid: 1
+      username: "bob_bernsteiner"
+      # Ersetze "your_hashed_password_here" durch den korrekten, via TYPO3 saltedpasswords generierten Passwort-Hash!
+      password: "VeryStrongPassword1234!"
+      name: "Bob Bernsteiner"
+      # Hier wird die UID der zugehörigen Gruppe (TrustedNewsReporters) referenziert.
+      usergroup: "1"
+      disable: 0
+
+  # Backend-Benutzergruppe: News publication
+  be_groups:
+    1:
+      pid: 1
+      title: "News publication"
+      list_modules: ""
+      db_mountpoints: ""
