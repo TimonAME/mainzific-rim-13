@@ -1,9 +1,6 @@
--- Achtung: Diese Datei wird beim Aktivieren der Extension ausgeführt!
--- Bestehende Inhalte in den untenstehenden Tabellen werden gelöscht.
-
-TRUNCATE TABLE fe_users;
-TRUNCATE TABLE fe_groups;
-TRUNCATE TABLE be_groups;
+DELETE FROM fe_users WHERE username = 'bob.bernsteiner';
+DELETE FROM fe_groups WHERE uid = 1;
+DELETE FROM be_groups WHERE uid = 10;
 
 -- FE-Gruppe: TrustedNewsReporters
 INSERT INTO fe_groups (uid, pid, title, hidden) VALUES
@@ -14,6 +11,5 @@ INSERT INTO be_groups (uid, pid, title, hidden) VALUES
 (10, 0, 'News publication', 0);
 
 -- FE-Benutzer: Bob Bernsteiner
--- Passwort: bobspassword (bcrypt)
 INSERT INTO fe_users (pid, username, password, usergroup, disable) VALUES
-(1, 'bob.bernsteiner', '$2y$10$you_must_not_forget_your_password', 1, 0);
+(1, 'bob.bernsteiner', '$2y$10$QeFG1F5sIa7HpB9Q33jxI.hvN7DVGCPUnZvqJZKslOL9Q5bU4I57O', 1, 0);
